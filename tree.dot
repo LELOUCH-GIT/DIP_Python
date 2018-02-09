@@ -1,0 +1,33 @@
+digraph ID3_Tree {
+"0" [shape=box, style=filled, label="outlook
+", weight=1]
+"1" [shape=box, style=filled, label="yes
+(4)
+", weight=2]
+0 -> 1 [ label = "overcast"];
+"2" [shape=box, style=filled, label="wind
+", weight=2]
+0 -> 2 [ label = "rain"];
+"3" [shape=box, style=filled, label="no
+(2)
+", weight=3]
+2 -> 3 [ label = "strong"];
+"4" [shape=box, style=filled, label="yes
+(3)
+", weight=3]
+2 -> 4 [ label = "weak"];
+"5" [shape=box, style=filled, label="humidity
+", weight=2]
+0 -> 5 [ label = "sunny"];
+"6" [shape=box, style=filled, label="no
+(3)
+", weight=3]
+5 -> 6 [ label = "high"];
+"7" [shape=box, style=filled, label="yes
+(2)
+", weight=3]
+5 -> 7 [ label = "normal"];
+{rank=same; 0;};
+{rank=same; 1;2;5;};
+{rank=same; 3;4;6;7;};
+}
